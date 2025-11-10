@@ -1,118 +1,110 @@
-# Pokedex Kotlin
+🐾 Pokedex Kotlin
 
-Um aplicativo Android desenvolvido em **Kotlin**, inspirado na Pokedex, para exibir detalhes de Pokémon, suas características e estatísticas.  
+Um aplicativo Android desenvolvido em Kotlin, inspirado na Pokedex, para exibir detalhes de Pokémon, suas características e estatísticas.
 
-O projeto segue o padrão **MVVM** com separação clara entre **View**, **Repository** e **Domain**, utilizando **coroutines** para chamadas assíncronas e **Glide** para carregamento de imagens.
+O projeto segue o padrão MVVM com separação clara entre View, Repository e Domain, utilizando coroutines para chamadas assíncronas e Glide para carregamento de imagens.
 
----
-
-## Package principal
-
-```text
+🗂️ Package principal
 br.com.paulafemina.android.pokedex_kotlin
+
 Arquitetura do Projeto
 graphql
 
 br.com.paulafemina.android.pokedex_kotlin/
 │
-├─ api/                    # Comunicação com API REST Pokémon
+├─ api/                    # 🌐 Comunicação com API REST Pokémon
 │   ├─ PokemonRepository.kt
-│   └─ model/              # Classes de resposta da API
+│   └─ model/              # 📦 Classes de resposta da API
 │       └─ PokemonApiResult.kt
 │
-├─ domain/                 # Modelos de domínio
+├─ domain/                 # 🎯 Modelos de domínio
 │   └─ Pokemon.kt
 │
-├─ util/                   # Utilitários do app
-│   └─ TypeColorUtil.kt    # Cores baseadas no tipo do Pokémon
+├─ util/                   # 🧰 Utilitários do app
+│   └─ TypeColorUtil.kt    # 🎨 Cores baseadas no tipo do Pokémon
 │
-├─ view/                   # Activities e layouts
+├─ view/                   # 👁️ Telas e UI
 │   ├─ MainActivity.kt
 │   ├─ PokemonDetailActivity.kt
-│   └─ adapter/            # Adapters para RecyclerView
+│   └─ adapter/            # 🔁 Adapter da RecyclerView
 │       └─ PokemonAdapter.kt
 │
 ├─ res/
-│   ├─ layout/             # XML de layouts
+│   ├─ layout/             # 🧱 Layouts XML
 │   │   ├─ activity_main.xml
 │   │   └─ activity_pokemon_detail.xml
-│   ├─ drawable/           # Ícones e imagens
-│   ├─ values/             # Cores, dimensões e strings
-│   └─ menu/               # Menu do app (drawer/menu)
+│   ├─ drawable/           # 🎨 Ícones e imagens
+│   ├─ values/             # 📌 Cores, dimensões e strings
+│   └─ menu/               # 🍔 Menus do app
 │
-└─ build.gradle            # Configurações do projeto
-```
+└─ build.gradle            # ⚙️ Configurações do projeto
 
-Funcionalidades
-Listagem de Pokémon com RecyclerView.
+✨ Funcionalidades
 
-Tela de detalhe do Pokémon:
+📜 Listagem de Pokémon com RecyclerView
 
-Imagem em card circular.
+🔍 Tela de detalhe do Pokémon:
 
-Nome, número e tipos em card centralizado (type_steel).
+🟡 Imagem em card circular
 
-Características e stats em card separado abaixo.
+🔢 Nome, número e tipos
 
-Tipos exibidos com cores correspondentes.
+🎨 Tipos exibidos com cores correspondentes
 
-Carregamento de imagens com Glide.
+🖼️ Carregamento de imagens com Glide
 
-Uso de coroutines (lifecycleScope) para chamadas assíncronas à API.
+⚡ Uso de coroutines para chamadas assíncronas
 
-Toolbar personalizada com botão de voltar.
+🎛️ Toolbar personalizada com botão de voltar
 
-Tecnologias e Bibliotecas
-Kotlin
-
-AndroidX
-
-Material Components
-
-Glide
-
-Coroutines
-
-MVVM
-
-RecyclerView
-
-MaterialCardView
-
-Layout e UI
+🧱 Tecnologias e Bibliotecas
+Tecnologia	Finalidade
+🧑‍💻 Kotlin	Linguagem principal
+🧩 AndroidX	Suporte ao Android moderno
+🎨 Material Components	UI moderna
+🖼️ Glide	Carregamento de imagens
+⚡ Coroutines	Concorrência assíncrona
+🧠 MVVM	Organização da arquitetura
+🔁 RecyclerView	Lista eficiente
+📦 MaterialCardView	Estilização de cards
+🖼️ Layout e UI
 activity_main.xml
 
-Lista de Pokémon com RecyclerView.
+Lista de Pokémon com:
 
-Cada item possui nome, imagem e tipo.
+🖼️ imagem
+
+🔤 nome
+
+🎨 tipo
 
 activity_pokemon_detail.xml
 
-Imagem do Pokémon em card circular com sombra.
+Card circular com imagem e sombra
 
-Card com nome, número e tipos (centralizado).
+Card com nome, número e tipos
 
-Card separado para características e stats.
+Card separado para stats e características
 
-ScrollView/NestedScrollView para conteúdo rolável.
+Rolagem com ScrollView/NestedScrollView
 
-Observações
-Toda lógica de cores por tipo é gerenciada em TypeColorUtil.kt.
+📝 Observações
 
-O PokemonRepository.kt faz chamadas à API REST Pokémon.
+🎨 Todas as cores de tipo são aplicadas via TypeColorUtil.kt
 
-Os dados de características são buscados de forma assíncrona e exibidos com fallback caso não estejam disponíveis.
+🌐 PokemonRepository.kt realiza chamadas à API REST Pokémon
 
-Como executar
+🧵 Dados carregados de forma assíncrona com fallback para dados indisponíveis
+
+▶️ Como executar
+
 Clone o repositório:
 
-bash
-Copiar código
 git clone https://github.com/seu_usuario/pokedex-kotlin.git
+
+
 Abra no Android Studio.
 
 Configure o SDK mínimo e compile o projeto.
 
-Rode em um dispositivo ou emulador com Android 6.0+.
-
-Aproveite a Pokedex!
+Rode no emulador ou dispositivo Android 6.0+.
