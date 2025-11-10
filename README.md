@@ -100,7 +100,7 @@ Rolagem com ScrollView/NestedScrollView
 
 Clone o repositório:
 
-git clone https://github.com/seu_usuario/pokedex-kotlin.git
+git clone https://github.com/Paula-Thamyres/pokedex-kotlin.git
 
 
 Abra no Android Studio.
