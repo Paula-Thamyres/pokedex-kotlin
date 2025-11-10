@@ -9,7 +9,7 @@ br.com.paulafemina.android.pokedex_kotlin
 
 Arquitetura do Projeto
 graphql
-
+```text
 br.com.paulafemina.android.pokedex_kotlin/
 │
 ├─ api/                    # 🌐 Comunicação com API REST Pokémon
@@ -38,7 +38,7 @@ br.com.paulafemina.android.pokedex_kotlin/
 │   └─ menu/               # 🍔 Menus do app
 │
 └─ build.gradle            # ⚙️ Configurações do projeto
-
+```
 ✨ Funcionalidades
 
 📜 Listagem de Pokémon com RecyclerView
